@@ -1,0 +1,66 @@
+:root{
+    --text-principal: 'Montserrat', sans-serif;
+    --text-secundario: 'Raleway', sans-serif;
+    --color-text-principal:hsl(0, 0%, 100%);
+    --color-text-secundario:hsl(0, 0%, 74%);
+    --color-fondo:hsl(0, 0%, 13%);
+    --color-itens:hsl(359, 92%, 65%);
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color:  var(--color-fondo);
+    text-align: center;
+}
+.menu{
+    list-style: none;
+    display: flex;
+    position: relative;
+
+    background-color: var(--color-itens);
+    font-family:var(--text-principal);
+    font-size: 1.5rem;
+    color:  var(--color-text-principal);
+}
+.submenu{
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 5vw;
+    right: 5vw;
+    text-align: center;
+    display: none;
+}
+ .menu-iten{
+    position: relative;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: calc(100% / 4);
+}
+.submenu .menu-iten{
+    width: 100%;
+    font-size: 1rem;
+    color:var(--color-text-secundario);
+    font-family:var(--text-secundario);
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+.menu-link{
+    text-decoration: none;
+    color:  var(--color-text-principal);
+    display: inline-block;
+    position: relative;
+}
+.img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+.menu-iten:hover>.submenu{
+    display: block;
+}
